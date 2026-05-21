@@ -2,44 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Google Search Console -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">>
     <meta name="google-site-verification" content="SW-Dc-END-vdyG-ZLdw2yFWFKtHkykvOxunWngqxegE">
-
-    <!-- SEO -->
     <title>Estudio Contable López & Paz | Contadores para Pymes y Autónomos</title>
-
     <meta name="description" content="Estudio Contable López & Paz. Asesoría contable, impositiva y administrativa para autónomos, emprendedores y pymes en Argentina. Atención personalizada y respuestas rápidas.">
-
     <meta name="keywords" content="estudio contable, contador, contabilidad, impuestos, monotributo, IVA, ganancias, sueldos, pymes, autónomos, asesoría contable, Argentina">
-
     <link rel="canonical" href="https://www.estudiolopezpaz.com.ar/">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="Estudio Contable López & Paz">
     <meta property="og:description" content="Asesoría contable para autónomos, emprendedores y pymes en Argentina.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.estudiolopezpaz.com.ar/">
     <meta property="og:image" content="https://www.estudiolopezpaz.com.ar/assets/estudiologo.png">
     <meta property="og:locale" content="es_AR">
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Estudio Contable López & Paz">
     <meta name="twitter:description" content="Asesoría contable e impositiva para pymes y autónomos.">
     <meta name="twitter:image" content="https://www.estudiolopezpaz.com.ar/assets/estudiologo.png">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
-
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -302,129 +284,7 @@
         WhatsApp
     </a>
 
-    <script>
-    (function(){
-        var headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 92;
-
-        // Smooth wheel / touchpad scroll
-        var current = window.scrollY || 0;
-        var target = current;
-        var ease = 0.12;
-        var ticking = false;
-
-        function maxScroll(){ return Math.max(0, document.documentElement.scrollHeight - window.innerHeight); }
-
-        function raf(){
-            current += (target - current) * ease;
-            if (Math.abs(target - current) < 0.5) {
-                current = target;
-                window.scrollTo(0, current);
-                ticking = false;
-                return;
-            }
-            window.scrollTo(0, current);
-            requestAnimationFrame(raf);
-        }
-
-        window.addEventListener('wheel', function(e){
-            // only when the user uses wheel / touchpad
-            if (e.ctrlKey) return; // allow zoom gestures
-            e.preventDefault();
-            target += e.deltaY;
-            if (target < 0) target = 0;
-            var mx = maxScroll(); if (target > mx) target = mx;
-            if (!ticking){ ticking = true; requestAnimationFrame(raf); }
-        }, {passive:false});
-
-        // Sync when user interacts with scrollbar or keyboard
-        window.addEventListener('scroll', function(){
-            if (!ticking){ current = window.scrollY; target = current; }
-        }, {passive:true});
-
-        // Anchor clicks: set target instead of abrupt jump
-        document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
-            anchor.addEventListener('click', function(e){
-                var href = this.getAttribute('href');
-                if (!href || href === '#') return;
-                var id = href.split('#')[1];
-                var el = document.getElementById(id);
-                if (el){
-                    e.preventDefault();
-                    var top = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
-                    target = Math.max(0, Math.min(top, maxScroll()));
-                    if (!ticking){ ticking = true; requestAnimationFrame(raf); }
-                    history.pushState(null, '', '#'+id);
-                }
-            });
-        });
-
-        // keep target in bounds on resize
-        window.addEventListener('resize', function(){ if (target > maxScroll()) target = maxScroll(); });
-
-        // Nav toggle behavior (mobile)
-        var navToggle = document.querySelector('.nav-toggle');
-        var navContainer = document.querySelector('.nav-container');
-        var mainNav = document.querySelector('.main-nav');
-        if (navToggle && navContainer) {
-            navToggle.addEventListener('click', function(){
-                var isOpen = navContainer.classList.toggle('open');
-                this.setAttribute('aria-expanded', isOpen);
-            });
-            if (mainNav) {
-                mainNav.querySelectorAll('a').forEach(function(a){
-                    a.addEventListener('click', function(){
-                        navContainer.classList.remove('open');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                    });
-                });
-            }
-            window.addEventListener('resize', function(){ if (window.innerWidth > 768) { navContainer.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); } });
-        }
-
-        // WhatsApp envio desde el formulario
-        var formContact = document.getElementById('contactos');
-        if (formContact) {
-            var whatsappNumber = '543525480117';
-            formContact.addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                var nombre = this.nombre.value.trim();
-                var apellido = this.apellido.value.trim();
-                var email = this.email.value.trim();
-                var ubicacion = this.ubicacion.value.trim();
-                var mensaje = this.mensaje.value.trim();
-
-                if (!mensaje) {
-                    alert('Por favor, escribí tu consulta antes de enviar.');
-                    this.mensaje.focus();
-                    return;
-                }
-
-                var lines = [];
-                if (nombre || apellido) {
-                    lines.push('Hola, soy ' + [nombre, apellido].filter(Boolean).join(' '));
-                } else {
-                    lines.push('Hola, soy un potencial cliente.');
-                }
-                if (ubicacion) {
-                    lines.push('Consulto sobre: ' + ubicacion);
-                }
-                if (email) {
-                    lines.push('Email: ' + email);
-                }
-                lines.push('Mensaje: ' + mensaje);
-
-                var whatsappText = encodeURIComponent(lines.join('\n'));
-                var whatsappUrl = 'https://wa.me/' + whatsappNumber + '?text=' + whatsappText;
-
-                window.open(whatsappUrl, '_blank');
-            });
-        }
-    })();
-
-    </script>
-    
-    </a>
+    <script src="./js/main.js"></script>
 
 </body>
 </html>

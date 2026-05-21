@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
 }
 
-/* NAVIGATION */
+/* nav */
 
 .nav-container {
     display: flex;
@@ -88,7 +88,7 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* nav toggle (mobile) */
+/* nav barra */
 .nav-toggle { display:none; background:transparent; border:0; cursor:pointer; }
 .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display:block; height:3px; width:22px; background:#eaf6ff; border-radius:3px; position:relative; transition:transform .2s ease, opacity .18s ease; }
 .nav-toggle span::before, .nav-toggle span::after { content:''; position:absolute; left:0; }
@@ -109,7 +109,7 @@ nav a:hover {
 
 .nav-contact a { color: var(--white) !important; padding: 8px 16px; display:inline-flex; align-items:center; }
 
-/* HERO */
+/* hero */
 
 .hero {
     width: 100%;
@@ -329,7 +329,7 @@ nav a:hover {
     }
 }
 
-/* NOSOTROS */
+/* nosotros */
 
 .nosotros {
     background:
@@ -461,7 +461,7 @@ hr {
     margin: 20px 0;
 }
 
-/* MAIN CONTENT */
+/* main */
 
 main {
     max-width: 100%;
@@ -495,7 +495,7 @@ main {
     color: #8dc7ff;
 }
 
-/* SERVICIOS */
+/* servicios */
 
 #servicios {
     background:
@@ -557,7 +557,7 @@ main {
     font-size: 1.5rem; color: var(--accent); 
 }
 
-/* FEATURES */
+/* cards */
 
 #por-que-elegirnos {
     background:
@@ -597,7 +597,7 @@ main {
 }
 
 
-/* IMAGES */
+/* imagenes */
 
 .mi-logo {
     display: block;
@@ -618,7 +618,7 @@ main {
     box-shadow: var(--shadow);
 }
 
-/* CONTACTOS */
+/* contactos */
 
 .contact-section {
     padding: 80px 20px;
@@ -762,7 +762,7 @@ main {
     border-left: 3px solid var(--accent);
 }
 
-/* Formulario Estilo Imagen */
+/* Formulario */
 .contact-form-card form {
     display: flex;
     flex-direction: column;
@@ -819,7 +819,7 @@ main {
     text-decoration: none;
 }
 
-/* WHATSAPP FLOAT */
+/* wsp float */
 
 .whatsapp-btn {
     background: linear-gradient(135deg,#25d366,#1eb954);
@@ -955,18 +955,16 @@ footer {
     }
 }
 
-/* SCROLL  */
+/* scroll  */
 
 html {
     scroll-behavior: smooth;
 }
 
-/* ensure anchors don't hide under the fixed header */
 section, [id] {
     scroll-margin-top: calc(var(--header-height) + 16px);
 }
 
-/* Custom scrollbar for modern browsers */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -980,13 +978,12 @@ section, [id] {
     border-radius: 999px;
 }
 
-/* Firefox */
 html {
     scrollbar-width: thin;
     scrollbar-color: var(--accent) transparent;
 }
 
-/* RESPONSIVE */
+/* responsive */
 
 @media (max-width: 768px) {
 
