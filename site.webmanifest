@@ -1,0 +1,16 @@
+{
+  "name": "Estudio Contable López & Paz",
+  "short_name": "López & Paz",
+  "description": "Asesoría contable, impositiva y administrativa para autónomos, emprendedores y pymes en Córdoba, Argentina.",
+  "lang": "es-AR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0E1D30",
+  "theme_color": "#0E1D30",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
