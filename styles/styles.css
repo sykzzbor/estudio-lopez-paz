@@ -1226,21 +1226,21 @@ html {
     }
 
     .footer-links {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
         width: 100%;
         gap: 10px;
     }
 
     .footer-links a {
-        flex: 1 1 calc(50% - 10px);
-        min-width: 140px;
-        justify-content: center;
+        width: 100%;
+        justify-content: flex-start;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .footer-links a:hover {
-        transform: translateY(-2px);
+        transform: translateX(4px);
     }
 
     .footer-bottom {
